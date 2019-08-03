@@ -1,0 +1,149 @@
+/*
+ * Patrón 7-1
+ *
+ * Esta es la estructura del patrón 7-1 utilizado en DesafíoLatam
+ * para la enseñanza del uso correcto de patrones dentro de CSS y
+ * también para la utilización de éste dentro de estructuras de
+ * trabajo colaborativo.
+ *
+ * @author Cristóbal Domínguez <cristobald@me.com>
+ * @since 1.0
+ * @version 1.1
+ *
+ */
+
+@import 'vendors/index';
+@import 'abstracts/index';
+@import 'base/index';
+@import 'themes/index';
+@import 'layout/index';
+@import 'components/index';
+@import 'pages/index';
+
+body {
+  font-family: 'arial', sans-serif;
+}
+
+.logo_svg{
+  margin-right: 15px;
+}
+
+header{
+  width: 100vw;
+  height: 90vh;
+}
+
+
+
+.main--text {
+  width: 400px;
+  position: absolute;
+  margin-top: 15vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr);
+  grid-template-rows: repeat(5, [row] auto);
+  grid-column-gap: 2em;
+  grid-row-gap: 15px;
+}
+
+.grid--item {
+  padding: 3em;
+  font-size: 14px;
+}
+
+.grid1 {
+  grid-column: col / span 3;
+  grid-row: row 3;
+}
+
+.grid2 {
+  grid-column: col 4 / span 3;
+  grid-row: row 3;
+  animation: opacity 30s 0s ease infinite;
+}
+
+.grid3 {
+  grid-column: col 7 / span 3;
+  grid-row: row 3;
+}
+
+.grid4 {
+  grid-column: col 10 / span 3;
+  grid-row: row 3;
+}
+
+
+
+hr{
+  border-top: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+.price--background{
+  width: 100vw;
+  display: flex;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+.cards{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+}
+
+
+.card {
+  display: inline-block;
+  margin: 2rem;
+  background-color: salmon;
+  z-index: 2;
+}
+
+.subtitle{
+  position: absolute;
+  display: inline;
+  padding-top: 300px;
+  z-index: 2;
+  color: white;
+}
+
+
+
+//2AB7CA cyan//
+//EE9480 Rosa//
+//333745 navy//
+
+
+.btn-success  {
+  background-color: #2AB7CA;
+  border: 1px solid #2AB7CA;
+}
+
+.btn-success:hover{
+  background-color: #EE9480;
+  border: 1px solid #EE9480;
+}
+
+@keyframes opacity {
+  0% { opacity: 0; }
+  10% { opacity: 0; }
+  15% { opacity: 1; }
+  100% { opacity: 1; }
+}
